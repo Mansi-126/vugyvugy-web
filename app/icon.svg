@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#ffffff"/>
+  
+  <!-- sound waves left -->
+  <g stroke="#cfe3d8" stroke-width="10" fill="none" stroke-linecap="round">
+    <path d="M90 210 A40 40 0 0 0 90 302"/>
+    <path d="M70 190 A65 65 0 0 0 70 322"/>
+  </g>
+  <circle cx="60" cy="180" r="6" fill="#1f8a5b"/>
+  <circle cx="60" cy="332" r="6" fill="#1f8a5b"/>
+
+  <!-- sound waves right -->
+  <g stroke="#cfe3d8" stroke-width="10" fill="none" stroke-linecap="round">
+    <path d="M422 210 A40 40 0 0 1 422 302"/>
+    <path d="M442 190 A65 65 0 0 1 442 322"/>
+  </g>
+  <circle cx="452" cy="180" r="6" fill="#1f8a5b"/>
+  <circle cx="452" cy="332" r="6" fill="#1f8a5b"/>
+
+  <!-- headphones -->
+  <rect x="110" y="190" width="50" height="120" rx="24" fill="#1f8a5b" stroke="#111" stroke-width="10"/>
+  <rect x="352" y="190" width="50" height="120" rx="24" fill="#1f8a5b" stroke="#111" stroke-width="10"/>
+
+  <!-- head -->
+  <path d="M160 180 Q180 120 256 120 Q332 120 352 180" fill="none" stroke="#111" stroke-width="16" stroke-linecap="round"/>
+  <rect x="160" y="140" width="192" height="180" rx="40" fill="#fff" stroke="#111" stroke-width="16"/>
+
+  <!-- face -->
+  <circle cx="220" cy="230" r="16" fill="#111"/>
+  <circle cx="292" cy="230" r="16" fill="#111"/>
+  <ellipse cx="190" cy="275" rx="18" ry="10" fill="#6ee7a0"/>
+  <ellipse cx="322" cy="275" rx="18" ry="10" fill="#6ee7a0"/>
+  <path d="M230 270 Q256 292 282 270" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round"/>
+  <path d="M242 185 L256 208 L270 185" fill="none" stroke="#1f8a5b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

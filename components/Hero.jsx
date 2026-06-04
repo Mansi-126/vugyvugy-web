@@ -550,7 +550,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto mb-4">
             {/* Windows CTA */}
             <a
-              href="/VugyVugy Setup 1.0.0.exe"
+              href="https://github.com/Mansi-126/vugyvugy-web/releases/download/v1.0.0/VugyVugy.Setup.1.0.0.exe"
               download
               className="flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-vugy-primary hover:bg-vugy-primary-hover text-white text-sm font-bold transition-all shadow-md hover:-translate-y-0.5"
             >
@@ -562,7 +562,7 @@ export default function Hero() {
 
             {/* Mac CTA */}
             <a
-              href="/VugyVugy-1.0.0.dmg"
+              href="https://github.com/Mansi-126/vugyvugy-web/releases/download/v1.0.0/VugyVugy-1.0.0-arm64.dmg"
               download
               className="flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl border-2 border-vugy-primary bg-white text-vugy-primary text-sm font-bold hover:bg-vugy-active-bg transition-all shadow-sm hover:-translate-y-0.5"
             >

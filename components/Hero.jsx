@@ -554,7 +554,12 @@ export default function Hero() {
             <a
               href="https://github.com/Mansi-126/vugyvugy-web/releases/download/v1.0.0/VugyVugy.Setup.1.0.0.exe"
               download
-              onClick={() => trackEvent("download", { platform: "windows", location: "hero" })}
+              onClick={() => {
+                if (!localStorage.getItem("vugy_downloaded")) {
+                  trackEvent("download", { platform: "windows", location: "hero" });
+                  localStorage.setItem("vugy_downloaded", "true");
+                }
+              }}
               className="w-full flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-vugy-primary hover:bg-vugy-primary-hover text-white text-sm font-bold transition-all shadow-md hover:-translate-y-0.5"
             >
               <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">

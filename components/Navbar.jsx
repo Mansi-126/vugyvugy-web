@@ -60,8 +60,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo & Slogan Group */}
           <div className="flex items-center gap-3 select-none">
-            <a 
-              href="#" 
+            <a
+              href="#"
               onClick={handleLogoClick}
               onMouseEnter={() => setFaceState(faceState === "click" ? "click" : "hover")}
               onMouseLeave={() => setFaceState(faceState === "click" ? "click" : "normal")}
@@ -107,14 +107,14 @@ export default function Navbar() {
 
                     {/* Left Earphone Cup */}
                     <rect x="12" y="38" width="10" height="24" rx="5" fill="#2D6A4F" stroke="#1A1A1A" strokeWidth="3" />
-                    
+
                     {/* Right Earphone Cup */}
                     <rect x="78" y="38" width="10" height="24" rx="5" fill="#2D6A4F" stroke="#1A1A1A" strokeWidth="3" />
 
                     {/* Body (Keycap) with 3D bottom shadow */}
                     <rect x="25" y="33" width="50" height="42" rx="12" fill="#E2E8F0" />
                     <rect x="25" y="30" width="50" height="42" rx="12" fill="#FFFFFF" stroke="#1A1A1A" strokeWidth="3.5" />
-                    
+
                     {/* Dynamic Happy Face Details */}
                     {/* Left Eye */}
                     {faceState === "normal" && (
@@ -126,7 +126,7 @@ export default function Navbar() {
                     {faceState === "click" && (
                       <path d="M34 44 L40 50 M40 44 L34 50" stroke="#1A1A1A" strokeWidth="3.5" strokeLinecap="round" fill="none" />
                     )}
-                    
+
                     {/* Right Eye */}
                     {faceState === "normal" && (
                       <circle cx="62" cy="48" r="3.5" fill="#1A1A1A" />
@@ -137,7 +137,7 @@ export default function Navbar() {
                     {faceState === "click" && (
                       <path d="M58 44 L66 50 M66 44 L58 50" stroke="#1A1A1A" strokeWidth="3.5" strokeLinecap="round" fill="none" />
                     )}
-                    
+
                     {/* Blushing cheeks */}
                     <ellipse cx="33" cy="56" rx="4" ry="2" fill="#86EFAC" />
                     <ellipse cx="67" cy="56" rx="4" ry="2" fill="#86EFAC" />
@@ -175,7 +175,7 @@ export default function Navbar() {
                   </svg>
                 </motion.div>
               </div>
-              
+
               <div className="flex flex-col justify-center">
                 <div className="flex items-baseline leading-none">
                   <span className="font-extrabold text-xl text-[#1A1A1A] tracking-tight">
@@ -191,10 +191,10 @@ export default function Navbar() {
                 </svg>
               </div>
             </a>
-            
+
             {/* Small tagline next to logo */}
             <span className="hidden lg:inline text-[9px] font-bold text-vugy-text-muted border-l border-vugy-border pl-3 self-center uppercase tracking-wider">
-              MAC & WINDOWS • PRESS ONCE. LAUGH TWICE.
+              Windows & Linux• PRESS ONCE. LAUGH TWICE.
             </span>
           </div>
 
@@ -252,7 +252,7 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="text-[9px] font-bold text-vugy-text-muted pt-4 border-t border-vugy-border uppercase tracking-widest">
-                MAC & WINDOWS • PRESS ONCE. LAUGH TWICE.
+                Windows & Linux • PRESS ONCE. LAUGH TWICE.
               </div>
             </div>
           </motion.div>

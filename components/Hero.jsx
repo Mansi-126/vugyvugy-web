@@ -492,7 +492,7 @@ export default function Hero() {
 
           {/* Unhinged Badges Pill */}
           <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-vugy-active-bg text-vugy-primary text-xs font-bold uppercase tracking-wider mb-5 border border-vugy-primary/20">
-            <span>Free Desktop App for Mac & Windows</span>
+            <span>Free Desktop App for Windows & Linux</span>
           </div>
 
           {/* SlapMac Copycat Headline */}
@@ -563,7 +563,7 @@ export default function Hero() {
               Download for Windows
             </a>
 
-            {/* Mac CTA */}
+            {/* Mac CTA
             <a
               href="https://github.com/Mansi-126/vugyvugy-web/releases/download/v1.0.0/VugyVugy-1.0.0-arm64.dmg"
               download
@@ -575,6 +575,7 @@ export default function Hero() {
               </svg>
               Download for Mac
             </a>
+            */}
           </div>
 
           {/* Under Note */}

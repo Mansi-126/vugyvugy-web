@@ -51,7 +51,7 @@ export default function DownloadSection() {
               </div>
             </a>
 
-            {/* Mac Download */}
+            {/* Mac Download
             <a
               href="https://github.com/Mansi-126/vugyvugy-web/releases/download/v1.0.0/VugyVugy-1.0.0-arm64.dmg"
               download
@@ -66,6 +66,7 @@ export default function DownloadSection() {
                 <span className="text-sm font-extrabold">macOS .dmg</span>
               </div>
             </a>
+            */}
           </div>
 
           {/* Under Info */}

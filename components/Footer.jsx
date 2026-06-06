@@ -81,7 +81,7 @@ export default function Footer() {
           <div className="flex items-center shrink-0 self-start md:self-auto mt-4 md:mt-0 select-none">
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-50 border border-slate-200/60 rounded-xl text-xs text-slate-600 font-bold shadow-sm">
               <Laptop className="w-4 h-4 text-[#2D6A4F]" />
-              Available for macOS & Windows
+              Available for Windows & Linux
             </span>
           </div>
 

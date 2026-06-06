@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useAptabase } from "@aptabase/react";
 
 export default function DownloadSection() {
+  const { trackEvent } = useAptabase();
   return (
     <section id="download" className="py-28 bg-vugy-primary text-white relative overflow-hidden scroll-mt-16">
       {/* Decorative accent details */}
@@ -37,6 +39,7 @@ export default function DownloadSection() {
             <a
               href="https://github.com/Mansi-126/vugyvugy-web/releases/download/v1.0.0/VugyVugy.Setup.1.0.0.exe"
               download
+              onClick={() => trackEvent("download", { platform: "windows", location: "download_section" })}
               className="w-full flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white text-vugy-primary hover:bg-[#FAFBF9] font-bold transition-all shadow-md hover:-translate-y-0.5 active:translate-y-0"
             >
               <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -52,6 +55,7 @@ export default function DownloadSection() {
             <a
               href="https://github.com/Mansi-126/vugyvugy-web/releases/download/v1.0.0/VugyVugy-1.0.0-arm64.dmg"
               download
+              onClick={() => trackEvent("download", { platform: "mac", location: "download_section" })}
               className="w-full flex items-center justify-center gap-3 px-8 py-4 rounded-xl border border-white bg-transparent text-white hover:bg-white/10 font-bold transition-all hover:-translate-y-0.5 active:translate-y-0"
             >
               <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">

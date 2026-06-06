@@ -3,8 +3,10 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Play, SkipForward, ChevronDown } from "lucide-react";
+import { useAptabase } from "@aptabase/react";
 
 export default function Hero() {
+  const { trackEvent } = useAptabase();
   // App Mockup Interactive States
   const [systemOn, setSystemOn] = useState(true);
   const [selectedKey, setSelectedKey] = useState("Spacebar");
@@ -552,6 +554,7 @@ export default function Hero() {
             <a
               href="https://github.com/Mansi-126/vugyvugy-web/releases/download/v1.0.0/VugyVugy.Setup.1.0.0.exe"
               download
+              onClick={() => trackEvent("download", { platform: "windows", location: "hero" })}
               className="flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-vugy-primary hover:bg-vugy-primary-hover text-white text-sm font-bold transition-all shadow-md hover:-translate-y-0.5"
             >
               <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -564,6 +567,7 @@ export default function Hero() {
             <a
               href="https://github.com/Mansi-126/vugyvugy-web/releases/download/v1.0.0/VugyVugy-1.0.0-arm64.dmg"
               download
+              onClick={() => trackEvent("download", { platform: "mac", location: "hero" })}
               className="flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl border-2 border-vugy-primary bg-white text-vugy-primary text-sm font-bold hover:bg-vugy-active-bg transition-all shadow-sm hover:-translate-y-0.5"
             >
               <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">

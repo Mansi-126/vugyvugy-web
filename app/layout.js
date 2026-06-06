@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { AptabaseProvider } from "@aptabase/react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -13,13 +14,17 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const appKey = process.env.NEXT_PUBLIC_APTABASE_KEY || "";
+
   return (
     <html
       lang="en"
       className={`${inter.variable} h-full scroll-smooth`}
     >
       <body className="min-h-full flex flex-col bg-vugy-bg text-vugy-text-primary antialiased font-sans select-none overflow-x-hidden">
-        {children}
+        <AptabaseProvider appKey={appKey}>
+          {children}
+        </AptabaseProvider>
       </body>
     </html>
   );

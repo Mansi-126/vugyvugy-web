@@ -8,8 +8,15 @@ import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import DownloadSection from "@/components/DownloadSection";
 import Footer from "@/components/Footer";
+import { useAptabase } from "@aptabase/react";
+import { useEffect } from "react";
 
 export default function Home() {
+  const { trackEvent } = useAptabase();
+
+  useEffect(() => {
+    trackEvent("visit");
+  }, [trackEvent]);
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navigation */}

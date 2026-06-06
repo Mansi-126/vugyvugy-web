@@ -10,7 +10,7 @@ const inter = Inter({
 export const metadata = {
   title: "VugyVugy - Make Every Keypress A Vibe.",
   description: "Assign funny meme sounds to your keyboard. One press = instant laugh. Built for developers who need a serotonin boost between PRs.",
-  keywords: ["VugyVugy", "Developer Serotonin", "Meme Soundboard", "Desktop App", "Windows", "Mac", "Electron"],
+  keywords: ["VugyVugy", "Developer Serotonin", "Meme Soundboard", "Desktop App", "Windows", "Linux", "Electron"],
 };
 
 export default function RootLayout({ children }) {

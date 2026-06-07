@@ -1,6 +1,7 @@
 "use client";
 
 import { Heart, Laptop, Mail } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -119,7 +120,15 @@ export default function Footer() {
           <p className="text-xs text-slate-400 font-medium flex items-center gap-1 justify-center sm:justify-start">
             &copy; 2026 VugyVugy. Made with <Heart className="w-3.5 h-3.5 text-red-500 fill-current" /> for developers who vibe.
           </p>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-4 gap-y-2 text-xs font-semibold text-slate-400">
+            <Link href="/terms" className="hover:text-[#2D6A4F] transition-colors">
+              Terms
+            </Link>
+            <span className="text-slate-200 select-none">•</span>
+            <Link href="/privacy" className="hover:text-[#2D6A4F] transition-colors">
+              Privacy
+            </Link>
+            <span className="text-slate-200 select-none">•</span>
             <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider bg-slate-50 border border-slate-200/50 px-2.5 py-1 rounded">
               v1.0.0
             </span>

@@ -15,10 +15,24 @@ export default function Home() {
   const { trackEvent } = useAptabase();
 
   useEffect(() => {
-    // Track unique visitor (only first time)
+    // Track EVERY visit (total page views - always increases)
+    trackEvent("page_view");
+    
+    // Track unique visitor (only first time ever, persists forever)
     if (!localStorage.getItem("vugy_visited")) {
-      trackEvent("visit");
-      localStorage.setItem("vugy_visited", "true");
+      const firstVisitTime = new Date().toISOString();
+      trackEvent("unique_visitor", {
+        first_visit: firstVisitTime,
+        user_type: "new"
+      });
+      localStorage.setItem("vugy_visited", firstVisitTime);
+    } else {
+      // Track returning visitor
+      const firstVisit = localStorage.getItem("vugy_visited");
+      trackEvent("returning_visitor", {
+        first_visit: firstVisit,
+        user_type: "returning"
+      });
     }
     
     // Performance monitoring for Core Web Vitals

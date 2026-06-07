@@ -1,6 +1,6 @@
 "use client";
 
-import { Heart, Laptop } from "lucide-react";
+import { Heart, Laptop, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Top Section: Branding & Platform Info */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-slate-100">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-8 pb-8 border-b border-slate-100">
 
           {/* Left: Brand Info */}
           <div className="flex flex-col items-start text-left">
@@ -77,8 +77,35 @@ export default function Footer() {
 
           </div>
 
+          {/* Middle: Contact Info */}
+          <div id="contact" className="flex flex-col items-start text-left gap-2.5 scroll-mt-20">
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+              Contact & Support
+            </span>
+            <div className="flex flex-col gap-2">
+              <a
+                href="mailto:contact@vugyvugy.site"
+                className="group flex items-center gap-2.5 text-xs font-semibold text-slate-600 hover:text-[#2D6A4F] transition-colors"
+              >
+                <div className="w-7 h-7 rounded-lg bg-slate-50 border border-slate-200/50 flex items-center justify-center group-hover:bg-[#2D6A4F]/10 group-hover:border-[#2D6A4F]/20 transition-all">
+                  <Mail className="w-3.5 h-3.5 text-slate-500 group-hover:text-[#2D6A4F] transition-colors" />
+                </div>
+                <span>contact@vugyvugy.site</span>
+              </a>
+              <a
+                href="mailto:support@vugyvugy.site"
+                className="group flex items-center gap-2.5 text-xs font-semibold text-slate-600 hover:text-[#2D6A4F] transition-colors"
+              >
+                <div className="w-7 h-7 rounded-lg bg-slate-50 border border-slate-200/50 flex items-center justify-center group-hover:bg-[#2D6A4F]/10 group-hover:border-[#2D6A4F]/20 transition-all">
+                  <Mail className="w-3.5 h-3.5 text-slate-500 group-hover:text-[#2D6A4F] transition-colors" />
+                </div>
+                <span>support@vugyvugy.site</span>
+              </a>
+            </div>
+          </div>
+
           {/* Right: Platform Badge */}
-          <div className="flex items-center shrink-0 self-start md:self-auto mt-4 md:mt-0 select-none">
+          <div className="flex items-center shrink-0 self-start select-none">
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-50 border border-slate-200/60 rounded-xl text-xs text-slate-600 font-bold shadow-sm">
               <Laptop className="w-4 h-4 text-[#2D6A4F]" />
               Available for Windows & Linux

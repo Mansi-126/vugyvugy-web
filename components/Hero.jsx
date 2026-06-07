@@ -549,24 +549,44 @@ export default function Hero() {
           </div>
 
           {/* Buttons */}
-          <div className="w-full max-w-[240px] mb-4">
-            {/* Windows CTA */}
-            <a
-              href="https://github.com/Mansi-126/vugyvugy-web/releases/download/v1.0.0/VugyVugy.Setup.1.0.0.exe"
-              download
-              onClick={() => {
-                if (!localStorage.getItem("vugy_downloaded")) {
-                  trackEvent("download", { platform: "windows", location: "hero" });
-                  localStorage.setItem("vugy_downloaded", "true");
-                }
-              }}
-              className="w-full flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-vugy-primary hover:bg-vugy-primary-hover text-white text-sm font-bold transition-all shadow-md hover:-translate-y-0.5"
-            >
-              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.1zM11.25 1.9L24 0v11.55H11.25V1.9zM11.25 12.45H24v11.55l-12.75-1.9v-9.65z" />
-              </svg>
-              Download for Windows
-            </a>
+          <div className="flex flex-row gap-3 w-full max-w-[494px] mb-4">
+            <div className="w-full max-w-[240px]">
+              {/* Windows CTA */}
+              <a
+                href="https://github.com/Mansi-126/vugyvugy-web/releases/download/v1.0.0/VugyVugy.Setup.1.0.0.exe"
+                download
+                onClick={() => {
+                  if (!localStorage.getItem("vugy_downloaded")) {
+                    trackEvent("download", { platform: "windows", location: "hero" });
+                    localStorage.setItem("vugy_downloaded", "true");
+                  }
+                }}
+                className="w-full flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-vugy-primary hover:bg-vugy-primary-hover text-white text-sm font-bold transition-all shadow-md hover:-translate-y-0.5"
+              >
+                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.1zM11.25 1.9L24 0v11.55H11.25V1.9zM11.25 12.45H24v11.55l-12.75-1.9v-9.65z" />
+                </svg>
+                Download for Windows
+              </a>
+            </div>
+
+            <div className="w-full max-w-[240px]">
+              {/* Linux CTA */}
+              <a
+                href="https://github.com/Mansi-126/vugyvugy-web/releases/download/v1.0.0/vugyvugy-electron_1.0.0_amd64.deb"
+                download
+                onClick={() => {
+                  if (!localStorage.getItem("vugy_downloaded")) {
+                    trackEvent("download", { platform: "linux", location: "hero" });
+                    localStorage.setItem("vugy_downloaded", "true");
+                  }
+                }}
+                className="w-full flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-white border border-vugy-border hover:bg-[#FAFBF9] text-vugy-text-primary text-sm font-bold transition-all shadow-md hover:-translate-y-0.5"
+              >
+                <img src="/tux.svg" className="w-5 h-5 object-contain" alt="Linux Logo" />
+                Download for Linux
+              </a>
+            </div>
           </div>
 
           {/* Under Note */}

@@ -15,25 +15,51 @@ export default function Home() {
   const { trackEvent } = useAptabase();
 
   useEffect(() => {
-    trackEvent("visit");
+    // Track unique visitor (only first time)
+    if (!localStorage.getItem("vugy_visited")) {
+      trackEvent("visit");
+      localStorage.setItem("vugy_visited", "true");
+    }
+    
+    // Performance monitoring for Core Web Vitals
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      // Report Web Vitals to analytics
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            trackEvent("page_load", { 
+              loadTime: entry.loadEventEnd - entry.loadEventStart 
+            });
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['navigation'] });
+    }
   }, [trackEvent]);
+
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Navigation */}
-      <Navbar />
+    <>
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-vugy-accent focus:text-white">
+        Skip to main content
+      </a>
+      
+      <div className="flex flex-col min-h-screen">
+        {/* Navigation */}
+        <Navbar />
 
-      {/* Main Content Sections */}
-      <main className="flex-grow">
-        <Hero />
-        <ProblemSolution />
-        <PlaylistBuilder />
-        <Features />
-        <HowItWorks />
-        <DownloadSection />
-      </main>
+        {/* Main Content Sections */}
+        <main id="main-content" className="flex-grow" role="main">
+          <Hero />
+          <ProblemSolution />
+          <PlaylistBuilder />
+          <Features />
+          <HowItWorks />
+          <DownloadSection />
+        </main>
 
-      {/* Footer */}
-      <Footer />
-    </div>
+        {/* Footer */}
+        <Footer />
+      </div>
+    </>
   );
 }

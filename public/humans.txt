@@ -1,0 +1,15 @@
+/* TEAM */
+Name: VugyVugy Team
+Site: vugyvugy.site
+Location: Internet
+
+/* THANKS */
+Next.js team for the amazing framework
+The open-source community
+
+/* SITE */
+Last update: 2026/06/07
+Language: English
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: React, Next.js, Tailwind CSS
+IDE: VS Code, Cursor, Windsurf

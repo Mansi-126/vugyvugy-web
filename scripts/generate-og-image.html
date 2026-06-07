@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VugyVugy OG Image Generator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .preview {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    /* OG Image Canvas - 1200x630 */
+    .og-image {
+      width: 1200px;
+      height: 630px;
+      background: linear-gradient(135deg, #FAFAF9 0%, #F5F5F4 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border: 1px solid #ddd;
+      margin: 0 auto;
+    }
+
+    .og-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(45,106,79,0.05)" stroke-width="1"/></pattern></defs><rect width="1200" height="630" fill="url(%23grid)"/></svg>');
+      pointer-events: none;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 40px;
+      z-index: 1;
+    }
+
+    .mascot {
+      width: 180px;
+      height: 180px;
+      background: white;
+      border-radius: 30px;
+      border: 6px solid #1A1A1A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .mascot-face {
+      font-size: 100px;
+    }
+
+    .title-section {
+      text-align: left;
+    }
+
+    .title {
+      font-size: 72px;
+      font-weight: 900;
+      color: #1A1A1A;
+      margin: 0;
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .tagline {
+      font-size: 36px;
+      color: #2D6A4F;
+      margin: 15px 0 0 0;
+      font-weight: 600;
+    }
+
+    .features {
+      display: flex;
+      gap: 30px;
+      margin-top: 50px;
+      z-index: 1;
+    }
+
+    .feature {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      font-size: 20px;
+      color: #1A1A1A;
+      font-weight: 600;
+      border: 2px solid #2D6A4F;
+      box-shadow: 0 4px 12px rgba(45,106,79,0.15);
+    }
+
+    .bottom-text {
+      position: absolute;
+      bottom: 30px;
+      right: 40px;
+      font-size: 24px;
+      color: #666;
+      font-weight: 500;
+      z-index: 1;
+    }
+
+    button {
+      background: #2D6A4F;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #245741;
+    }
+
+    .instructions {
+      background: #fff3cd;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      border-left: 4px solid #ffc107;
+    }
+
+    .instructions h3 {
+      margin-top: 0;
+    }
+
+    .instructions code {
+      background: #f8f9fa;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>VugyVugy OG Image Generator</h1>
+    
+    <div class="preview">
+      <h2>Open Graph Image Preview (1200x630)</h2>
+      <div class="og-image" id="og-canvas">
+        <div class="logo-section">
+          <div class="mascot">
+            <div class="mascot-face">🎧</div>
+          </div>
+          <div class="title-section">
+            <h1 class="title">VugyVugy</h1>
+            <p class="tagline">Make Every Keypress A Vibe</p>
+          </div>
+        </div>
+        <div class="features">
+          <div class="feature">🎵 Meme Sounds</div>
+          <div class="feature">⌨️ Every Key</div>
+          <div class="feature">💻 Free Desktop App</div>
+        </div>
+        <div class="bottom-text">vugyvugy.site</div>
+      </div>
+      <button onclick="downloadAsImage()">📸 Download as PNG (1200x630)</button>
+    </div>
+
+    <div class="instructions">
+      <h3>📋 How to Use:</h3>
+      <ol>
+        <li>Click the "Download as PNG" button above</li>
+        <li>Save as <code>og-image.png</code></li>
+        <li>Place it in <code>/public/og-image.png</code></li>
+        <li>For favicons, use a tool like <a href="https://realfavicongenerator.net/" target="_blank">RealFaviconGenerator</a></li>
+        <li>Upload your icon.svg and generate all required sizes</li>
+      </ol>
+      <p><strong>Required Images:</strong></p>
+      <ul>
+        <li><code>og-image.png</code> (1200x630) - Social media preview ✅</li>
+        <li><code>favicon-16x16.png</code> (16x16)</li>
+        <li><code>favicon-32x32.png</code> (32x32)</li>
+        <li><code>apple-touch-icon.png</code> (180x180)</li>
+        <li><code>android-chrome-192x192.png</code> (192x192)</li>
+        <li><code>android-chrome-512x512.png</code> (512x512)</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    async function downloadAsImage() {
+      const canvas = document.getElementById('og-canvas');
+      const html2canvas = window.html2canvas;
+      
+      if (!html2canvas) {
+        alert('Loading library... Please try again in a moment.');
+        return;
+      }
+
+      try {
+        const screenshot = await html2canvas(canvas, {
+          width: 1200,
+          height: 630,
+          scale: 2, // Higher quality
+          backgroundColor: '#FAFAF9'
+        });
+
+        // Download
+        const link = document.createElement('a');
+        link.download = 'og-image.png';
+        link.href = screenshot.toDataURL('image/png');
+        link.click();
+      } catch (error) {
+        console.error('Error generating image:', error);
+        alert('Error generating image. Try using a screenshot tool instead.');
+      }
+    }
+  </script>
+</body>
+</html>

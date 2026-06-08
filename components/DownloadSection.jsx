@@ -10,8 +10,12 @@ export default function DownloadSection() {
   const [showLinuxDropdown, setShowLinuxDropdown] = useState(false);
 
   const handleDownload = (platform, format) => {
+    // Track ALL downloads (total count - always increases)
+    trackEvent("total_download", { platform, format, location: "download_section" });
+    
+    // Track unique downloads (first download only)
     if (!localStorage.getItem("vugy_downloaded")) {
-      trackEvent("download", { platform, format, location: "download_section" });
+      trackEvent("unique_download", { platform, format, location: "download_section" });
       localStorage.setItem("vugy_downloaded", "true");
     }
   };

@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vugyvugy.site";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vugyvugy.com";
 
   return [
     {
@@ -25,6 +25,18 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${siteUrl}/terms`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
     },
   ];
 }

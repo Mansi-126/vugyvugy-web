@@ -36,9 +36,7 @@ const ALL_SOUNDS = [
   { id: "s5", name: "Gajab Bejjati", file: "gajab-bejjati-hai-yaar.mp3", emoji: "😅", category: "Funny", duration: "00:03", avatarBg: "bg-pink-100 text-pink-600" },
   { id: "s6", name: "Mera Mazak", file: "kaisa-laga-mera-mazak.mp3", emoji: "😜", category: "Memes", duration: "00:02", avatarBg: "bg-orange-100 text-orange-600" },
   { id: "s7", name: "Kaun Hai Ye", file: "kaun-hai-ye-log.mp3", emoji: "👽", category: "Memes", duration: "00:03", avatarBg: "bg-purple-100 text-purple-600" },
-  { id: "s8", name: "Tejaswi Log", file: "kitne-tejaswi-log-hai-hamare-pass.mp3", emoji: "✨", category: "Funny", duration: "00:05", avatarBg: "bg-cyan-100 text-cyan-600" },
-  { id: "s9", name: "Pehchana", file: "pehchana-mujhe.mp3", emoji: "😎", category: "Memes", duration: "00:02", avatarBg: "bg-amber-100 text-amber-600" },
-  { id: "s10", name: "Rom Rom", file: "rom-rom-bhaiyo.mp3", emoji: "🙏", category: "Effects", duration: "00:02", avatarBg: "bg-emerald-100 text-emerald-600" }
+  { id: "s8", name: "Rom Rom", file: "rom-rom-bhaiyo.mp3", emoji: "🙏", category: "Effects", duration: "00:02", avatarBg: "bg-emerald-100 text-emerald-600" }
 ];
 
 export default function PlaylistBuilder() {
@@ -47,7 +45,7 @@ export default function PlaylistBuilder() {
     {
       id: "p-1",
       name: "Work Vibes",
-      soundIds: ["s10", "s4", "s8", "s1", "s9", "s5"],
+      soundIds: ["s8", "s4", "s1", "s5"],
     },
     {
       id: "p-2",
@@ -57,12 +55,12 @@ export default function PlaylistBuilder() {
     {
       id: "p-3",
       name: "Funny Breaks",
-      soundIds: ["s5", "s6", "s1", "s9", "s8"],
+      soundIds: ["s5", "s6", "s1"],
     },
     {
       id: "p-4",
       name: "Late Night Coding",
-      soundIds: ["s4", "s10", "s3"],
+      soundIds: ["s4", "s8", "s3"],
     }
   ]);
 

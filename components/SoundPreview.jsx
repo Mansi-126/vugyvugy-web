@@ -61,20 +61,6 @@ export default function SoundPreview() {
     },
     {
       id: "sound-8",
-      name: "Kitne Tejaswi Log",
-      file: "kitne-tejaswi-log-hai-hamare-pass.mp3",
-      emoji: "✨",
-      description: "Sarcastic praise for the 'galaxy brain' architects in your team.",
-    },
-    {
-      id: "sound-9",
-      name: "Pehchana Mujhe",
-      file: "pehchana-mujhe.mp3",
-      emoji: "😎",
-      description: "Play this when you return from vacation and push to production.",
-    },
-    {
-      id: "sound-10",
       name: "Rom Rom Bhaiyo",
       file: "rom-rom-bhaiyo.mp3",
       emoji: "🙏",

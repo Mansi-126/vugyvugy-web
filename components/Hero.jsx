@@ -590,9 +590,35 @@ export default function Hero() {
           </div>
 
           {/* Under Note */}
-          <div className="flex items-center gap-2 text-sm text-vugy-text-muted">
+          <div className="flex items-center gap-2 text-sm text-vugy-text-muted mb-3">
             <span className="text-vugy-primary font-bold text-base leading-none">✓</span>
             <span>Free. Works best when your manager is on mute.</span>
+          </div>
+
+          {/* Social Proof - Profile Avatars with +2 */}
+          <div className="flex items-center gap-2.5">
+            <div className="flex -space-x-2">
+              {/* Avatar 1 - Visible */}
+              <div className="w-9 h-9 rounded-full border-2 border-white shadow-sm overflow-hidden bg-gradient-to-br from-emerald-400 to-emerald-600">
+                <img 
+                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=65a30d" 
+                  alt="User" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* +2 Badge */}
+              <div className="w-9 h-9 rounded-full bg-vugy-primary border-2 border-white flex items-center justify-center shadow-sm">
+                <span className="text-white text-xs font-extrabold">+2</span>
+              </div>
+            </div>
+            <div className="text-left">
+              <p className="text-sm font-bold text-vugy-text-primary leading-tight">
+                50+ downloads
+              </p>
+              <p className="text-xs text-vugy-text-muted">
+                Join developers worldwide
+              </p>
+            </div>
           </div>
         </motion.div>
 

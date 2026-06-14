@@ -503,7 +503,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="text-sm sm:text-base text-vugy-text-secondary mb-5 max-w-lg leading-relaxed">
-            VugyVugy sits quietly in your menu bar. Every time you press Space, Enter, or Arrow keys, it triggers a hilarious meme sound effect. Instant serotonin between pull request reviews.
+           Press spacebar. Hear 'Aauuu 😩'. Laugh out loud. The meme soundboard that makes debugging bearable — free for Windows & Linux.
           </p>
 
           {/* Interactive Giant Spacebar Keycap */}

@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import VideoIntro from "@/components/VideoIntro";
 import ProblemSolution from "@/components/ProblemSolution";
 import PlaylistBuilder from "@/components/PlaylistBuilder";
 import Features from "@/components/Features";
@@ -64,6 +65,7 @@ export default function Home() {
         {/* Main Content Sections */}
         <main id="main-content" className="flex-grow" role="main">
           <Hero />
+          <VideoIntro />
           <ProblemSolution />
           <PlaylistBuilder />
           <Features />

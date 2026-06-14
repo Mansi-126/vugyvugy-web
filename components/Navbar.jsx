@@ -195,7 +195,7 @@ export default function Navbar() {
 
             {/* Small tagline next to logo */}
             <span className="hidden lg:inline text-[9px] font-bold text-vugy-text-muted border-l border-vugy-border pl-3 self-center uppercase tracking-wider">
-              Windows & Linux• PRESS ONCE. LAUGH TWICE.
+              Windows & Linux • Press once, laugh twice
             </span>
           </div>
 

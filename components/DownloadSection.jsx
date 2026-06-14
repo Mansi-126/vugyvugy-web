@@ -37,7 +37,7 @@ export default function DownloadSection() {
 
           {/* Headline */} 
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white">
-            Your next bug deserves a soundtrack.
+            Ready to vibe at work?
           </h2>
 
           {/* Subheadline */}

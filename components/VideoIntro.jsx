@@ -67,7 +67,7 @@ export default function VideoIntro() {
             <video
               ref={videoRef}
               className="w-full aspect-video object-cover cursor-pointer"
-              poster="/video-poster.jpg"
+              poster="/Thumnails.png"
               onClick={handleVideoClick}
               onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
@@ -84,7 +84,7 @@ export default function VideoIntro() {
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.3 }}
                 onClick={handlePlayPause}
-                className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm group-hover:bg-black/40 transition-all"
+                className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-all"
                 aria-label="Play video"
               >
                 <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white/95 hover:bg-white flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110 active:scale-95">
